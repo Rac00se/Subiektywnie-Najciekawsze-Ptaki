@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main_theme.css">
     <title>Najciekawsze ptaki</title>
 </head>
 <body>
@@ -24,10 +25,12 @@
             <h2>Orłosęp brodaty (Gypaetus barbatus)</h2>
             
             <div class="gallery">
-                <img src="photos/barbatus/bar0.jpg" alt="Orłosęp brodaty 1">
-                <img src="photos/barbatus/bar1.jpg" alt="Orłosęp brodaty 2">
-                <img src="photos/barbatus/bar2.jpg" alt="Orłosęp brodaty 3">
-                <img src="photos/barbatus/bar3.jpg" alt="Orłosęp brodaty 4">
+                <button class="slider-btn prev_bird">&lt;</button>
+                <img src="photos/barbatus/bar0.jpg" alt="Orłosęp brodaty 1" class="bird bird_base">
+                <img src="photos/barbatus/bar1.jpg" alt="Orłosęp brodaty 2" class="bird">
+                <img src="photos/barbatus/bar2.jpg" alt="Orłosęp brodaty 3" class="bird">
+                <img src="photos/barbatus/bar3.jpg" alt="Orłosęp brodaty 4" class="bird">
+                <button class="slider-btn next_bird">&gt;</button>
             </div>
 
             <section class="description">
@@ -55,10 +58,12 @@
             <h2>Trzewikodziób (Balaeniceps rex)</h2>
             
             <div class="gallery">
-                <img src="photos/rex/rex0.jpg" alt="Trzewikodziób 1">
-                <img src="photos/rex/rex1.jpg" alt="Trzewikodziób 2">
-                <img src="photos/rex/rex2.jpg" alt="Trzewikodziób 3">
-                <img src="photos/rex/rex3.jpg" alt="Trzewikodziób 4">
+                <button class="slider-btn prev_bird">&lt;</button>
+                <img src="photos/rex/rex0.jpg" alt="Trzewikodziób 1" class="bird bird_base">
+                <img src="photos/rex/rex1.jpg" alt="Trzewikodziób 2" class="bird">
+                <img src="photos/rex/rex2.jpg" alt="Trzewikodziób 3" class="bird">
+                <img src="photos/rex/rex3.jpg" alt="Trzewikodziób 4" class="bird">
+                <button class="slider-btn next_bird">&gt;</button>
             </div>
 
             <section class="description">
@@ -85,10 +90,12 @@
             <h2>Kruk zwyczajny (Corvus corax)</h2>
             
             <div class="gallery">
-                <img src="photos/corax/corax0.jpg" alt="Kruk zwyczajny 1">
-                <img src="photos/corax/corax1.jpg" alt="Kruk zwyczajny 2">
-                <img src="photos/corax/corax2.jpg" alt="Kruk zwyczajny 3">
-                <img src="photos/corax/corax3.jpg" alt="Kruk zwyczajny 4">
+                <button class="slider-btn prev_bird">&lt;</button>
+                <img src="photos/corax/corax0.jpg" alt="Kruk zwyczajny 1" class="bird bird_base">
+                <img src="photos/corax/corax1.jpg" alt="Kruk zwyczajny 2" class="bird">
+                <img src="photos/corax/corax2.jpg" alt="Kruk zwyczajny 3" class="bird">
+                <img src="photos/corax/corax3.jpg" alt="Kruk zwyczajny 4" class="bird">
+                <button class="slider-btn next_bird">&gt;</button>
             </div>
 
             <section class="description">
@@ -117,6 +124,9 @@
     <footer>
         <p>Strona został utworzona przez Annę Latawiec.</p>
     </footer>
+    <button id="teleport_top_button">/\</button> <!-- Przycisk powrotu na górę strony -->
+    <script src="back_to_top.js"></script>
     <script src="quiz.js"></script>
+    <script src="bird_gallery.js"></script>
 </body>
 </html>

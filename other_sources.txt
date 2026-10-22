@@ -1,8 +1,8 @@
 Color palete:
 https://coolors.co/palette/ccd5ae-e9edc9-fefae0-faedcd-ddb892
 Hex:
-1) CCD5AE - nav
+1) CCD5AE - nav +header 1
 2) E9EDC9 - nav hover + headings
 3) FEFAE0 - background
 4) FAEDCD - back to top button + hover
-5) DDB892 - back to top button + gallery buttons
+5) DDB892 - back to top button + gallery buttons 

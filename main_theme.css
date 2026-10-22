@@ -16,6 +16,7 @@
     height: 50px;
     font-size: 24px;
     transition: background-color 1s; 
+    cursor: pointer;
 }
 
 #teleport_top_button:hover {
@@ -52,7 +53,7 @@
     top: 50%;
     background-color: #DDB892;
     color: black;
-    border: none;
+    border: 3px solid #FAEDCD;
     cursor: pointer;
     border-radius: 50%; /*50%, 50px i 50px sprawiają że jest to koło*/
     width: 50px;
@@ -64,5 +65,212 @@
 .prev_bird { left: 10px; }
 .next_bird { right: 10px; }
 
+
+/* PODSTAWOWE USTAWIENIA========================================================================================================================*/
+
+body {
+    background-color: #FEFAE0; /* Główne, kremowe tło strony */
+    color: darkslategray ; 
+    font-family: Helvetica;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto; /* Centrowanie */
+    padding: 20px;
+}
+
+/* NAGŁÓWKI */
+h1, h2, h3, h4 {
+    color: darkslategray;
+}
+
+h1 {
+    display: flex; 
+    justify-content: center; 
+    background-color: #CCD5AE;
+    padding: 15px 15px;
+    border-radius: 6px;
+    border-left: 5px darkslategray solid;
+    border-right: 5px darkslategray solid;
+}
+
+
+h2 {
+    display: flex; 
+    justify-content: center; 
+    background-color: #E9EDC9;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border-left: 5px solid #CCD5AE;
+}
+
+/* NAV ---------------------------------------------*/
+header {
+    background-color: #CCD5AE; 
+    padding: 15px 0;
+    position: sticky; /* Przykleja menu do góry ekranu */
+    top: 0;
+    z-index: 10; /* menu nad galerią, pod teleportacją*/
+    box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style-type: none; /* Usuwa kropki*/
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+nav a {
+    text-decoration: none;
+    color: darkslategray;
+    font-weight: 600; /* Pogrubienie dla lepszej widoczności */
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #E9EDC9; 
+}
+
+/* ARTICLE --------------------------------------- */
+article {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* FOOTER ---------------------------------------*/
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #CCD5AE;
+    margin-top: 20px;
+    font-size: 15px;
+
+}
+
+/*QUIZ========================================================================================================================*/
+
+#bird-quiz {
+    background-color: #ffffff; 
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.progress {
+    text-align: right;
+    font-size: 15px;
+    color: darkslategray;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/*ODPOWIEDZI ------------------------------*/
+#answers {
+    display: flex;
+    flex-direction: column; /* Ustawia przyciski jeden pod drugim */
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+/* przyciski */
+.answer {
+    background-color: #FAEDCD; 
+    color: #333333;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 15px 20px;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Reakcja na najechanie myszką - tylko dla aktywnych przycisków */
+.answer:hover:not(:disabled) {
+    background-color: #DDB892; /* Ciemniejszy akcent z palety */
+    transform: translateX(5px); /* Subtelne przesunięcie w prawo zachecające do kliknięcia */
+}
+
+/* Wygląd po zablokowaniu (gdy użytkownik już odpowie) */
+.answer:disabled {
+    cursor: help;
+    opacity: 0.6; /* Wygaszenie niewybranych odpowiedzi i tej niepoprawnej jeśli kliknięto */
+}
+
+/* poprawne */
+.answer.correct {
+    background-color: #CCD5AE; /* Zielony = dobra */
+    border-color: #7a9c59; 
+    color: #1b3a10;
+    opacity: 1; /* Nadpisuje wygaszenie z disabled, aby dobra odpowiedź była dobrze widoczna*/
+    font-weight: bold;
+}
+
+.answer.wrong {
+    background-color: lightcoral; 
+    border-color: crimson;
+    color: darkred;
+    opacity: 1;
+}
+
+/* FEEDBACK-----------------------------*/
+#feedback {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #FEFAE0; 
+    border-left: 5px solid #DDB892; 
+    border-radius: 4px;
+    line-height: 1.5;
+}
+
+#feedback:empty { /* ukrywa puki JS nie pozwoli*/
+    display: none;
+}
+
+/* PRZYCISK NASTĘPNEGO PYTANIA / RESTARTU ------------------------ */
+.main-button {
+    display: block;
+    margin: 25px auto 0; /* Wyśrodkowanie w poziomie */
+    background-color: #CCD5AE;
+    color: #2c3e20;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 30px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.main-button:hover {
+    background-color: #E9EDC9;
+    transform: scale(1.05); /* zoom */
+}
+
+/* WYNIKI-----------------------------------*/
+.result {
+    text-align: center;
+}
+
+.result .score {
+    font-size: 30px;
+    font-weight: bold;
+    color: darkslategray;
+    margin: 15px 0;
+}
 
 /* ========================================================================================================================*/

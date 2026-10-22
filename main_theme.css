@@ -273,4 +273,48 @@ footer {
     margin: 15px 0;
 }
 
-/* ========================================================================================================================*/
+/* URZĄDZENIA MOBILNE========================================================================================================================*/
+@media (max-width: 768px) {
+    
+    /*NAV-------------------------------------------*/
+    header {
+        position: relative; /* wyłaczenie sticky */
+        padding: 10px 15px; 
+    }
+    
+    /* w pionie kafelki*/
+    nav ul {
+        flex-direction: column; /* flex dla kollumn */
+        gap: 8px; 
+    }
+    
+    nav a {
+        display: block; /* kafelki */
+        text-align: center;
+        background-color: #FAEDCD; /* zmiana koloru aby widać było róznice miedzy dużym a małym ekranem */
+        border-radius: 8px; 
+    }
+
+    /*GALERY-------------------------------------------*/
+    .slider-btn {
+        width: 35px; /* Zmniejszenie z 50px */
+        height: 35px;
+        font-size: 14px; 
+        padding: 0;
+        border-width: 2px; /* mała ramka */
+    }
+    /*TELEPORT TOP-------------------------------------------*/
+    #teleport_top_button {
+        width: 40px; /* zmniejszenie z 50px */
+        height: 40px;
+        font-size: 18px;
+        bottom: 15px; /* ściścnięcie dla osczędności miejsca */
+        right: 15px;
+    }
+
+    /*MNIEJSZE MARGINESY W ARTYKUŁACH-------------------------------------------*/
+    article, #bird-quiz {
+        padding: 15px; /* zmniejszenie paddingu z 30px */
+        margin-bottom: 20px;
+    }
+}
